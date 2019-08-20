@@ -1,0 +1,20 @@
+<script>
+
+function melange(tableau){	
+	var tableau2 =[];
+	for(let i =0;i<tableau.length;i++){
+		//x un indice aleatoire de 0 à 31
+		// GENERER le nb aleatoire
+		do{
+			x =	Math.floor(Math.random() * tableau.length);
+		}while(tableau2[x] != undefined);
+		// tant que l'emplacement n'est pas vide
+		tableau2[x] = tableau[i];
+	}
+	return tableau2
+}
+//--------------------
+var tab = [ 42, 43,44,45,46];
+var tab2 = melange(tab);
+console.log(tab2);
+</script>
